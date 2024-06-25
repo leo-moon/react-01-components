@@ -1,3 +1,9 @@
+import User from './User/User.jsx'
+import userInfo from './user.json'
+
+// console.log(userInfo)
+const stats = userInfo.stats
+// console.log(stats)
 export const App = () => {
   return (
     <div
@@ -10,7 +16,13 @@ export const App = () => {
         color: '#010101'
       }}
     >
-      React homework template
+      <User
+        username={userInfo.username}
+        tag={userInfo.tag}
+        location={userInfo.location}
+        avatar={userInfo.avatar}
+        stats={stats}
+      />
     </div>
   );
 };
