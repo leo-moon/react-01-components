@@ -12,17 +12,13 @@ const User = ({
   // }
   stats = { stats }
 }) => {
-  console.log(stats)
   const statKeys = Object.keys(stats)
-  // console.log("statKeys =  ", statKeys)
-
   statKeys.forEach(item => { console.log("item = ", item, statKeys.indexOf(item)) })
 
   const elements = statKeys.map(item => {
-    // key = statKeys.indexOf(item)
-    console.log("item22 = ", item, statKeys.indexOf(item))
-    return (
-      <li>
+   return (
+      <li key = {statKeys.indexOf(item)}>
+        
         <span className={s.label}>{item}</span>
         <span className={s.quantity}>{stats[item]}</span>
       </li>)
