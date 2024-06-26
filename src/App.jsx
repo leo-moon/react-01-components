@@ -1,9 +1,7 @@
 import Profile from './components/Profile/Profile.jsx'
-import userInfo from './user.json'
+import userInfo from './components/Profile/user.json'
 
-// console.log(userInfo)
-const stats = userInfo.stats
-// console.log(stats)
+
 export const App = () => {
   return (
     <div
@@ -21,7 +19,7 @@ export const App = () => {
         tag={userInfo.tag}
         location={userInfo.location}
         avatar={userInfo.avatar}
-        stats={stats}
+        stats={userInfo.stats}
       />
     </div>
   );

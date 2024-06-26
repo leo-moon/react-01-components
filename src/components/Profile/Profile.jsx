@@ -5,7 +5,7 @@ const User = ({
   tag = 'tag',
   location = "Land, Eurth",
   avatar = "https://cdn-icons-png.flaticon.com/512/2922/2922506.png",
-  stats = { stats }
+  stats = {}
 }) => {
 
   const statKeys = Object.keys(stats)
@@ -13,15 +13,15 @@ const User = ({
 
   const elements = statKeys.map(item => {
     return (
-      <li key={statKeys.indexOf(item)}>
+      <li key={statKeys.indexOf(item)} className={s.item}>
         <span className={s.label}>{item}</span>
         <span className={s.quantity}>{stats[item]}</span>
       </li>)
   }
   )
   return (
-    <>
       <div className={s.profile}>
+
         <div className={s.description}>
           <img
             src={avatar}
@@ -36,9 +36,10 @@ const User = ({
         <ul className={s.stats}>
           {elements}
         </ul>
+
       </div>
-    </>
   )
 }
 
 export default User
+
