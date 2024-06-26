@@ -11,7 +11,6 @@ const Profile = ({
 }) => {
 
   const statKeys = Object.keys(stats)
-  // statKeys.forEach(item => { console.log("item = ", item, statKeys.indexOf(item)) })
 
   const elements = statKeys.map(item => {
     return (
