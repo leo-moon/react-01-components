@@ -1,4 +1,4 @@
-import User from './User/User.jsx'
+import Profile from './components/Profile/Profile.jsx'
 import userInfo from './user.json'
 
 // console.log(userInfo)
@@ -16,7 +16,7 @@ export const App = () => {
         color: '#010101'
       }}
     >
-      <User
+      <Profile
         username={userInfo.username}
         tag={userInfo.tag}
         location={userInfo.location}

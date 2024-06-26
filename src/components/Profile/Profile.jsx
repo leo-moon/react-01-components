@@ -1,32 +1,24 @@
-import s from './user.module.css'
+import s from './profile.module.css'
 
 const User = ({
   username = 'username',
   tag = 'tag',
   location = "Land, Eurth",
   avatar = "https://cdn-icons-png.flaticon.com/512/2922/2922506.png",
-  // stats = {
-  //   followers: '0',
-  //   views: '0',
-  //   likes: '0'
-  // }
   stats = { stats }
 }) => {
+
   const statKeys = Object.keys(stats)
-  statKeys.forEach(item => { console.log("item = ", item, statKeys.indexOf(item)) })
+  // statKeys.forEach(item => { console.log("item = ", item, statKeys.indexOf(item)) })
 
   const elements = statKeys.map(item => {
-   return (
-      <li key = {statKeys.indexOf(item)}>
-        
+    return (
+      <li key={statKeys.indexOf(item)}>
         <span className={s.label}>{item}</span>
         <span className={s.quantity}>{stats[item]}</span>
       </li>)
   }
   )
-
-  console.log("elements = ", elements)
-
   return (
     <>
       <div className={s.profile}>
