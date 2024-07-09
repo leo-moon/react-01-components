@@ -28,11 +28,11 @@ export const App = () => {
       <Statistics
         title="Upload stats" stats={data}
       />
-      <FriendList
-        avatar={friends.avatar}
-        name={friends.name}
-        isOnline={friends.isOnline}
-        id={friends.id}
+      <FriendList friends
+        // avatar={friends.avatar}
+        // name={friends.name}
+        // isOnline={friends.isOnline}
+        // id={friends.id}
       />
     </div>
   );
